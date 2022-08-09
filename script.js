@@ -1,1 +1,3 @@
-alert("Hola Mundo");
+var nombre = "Nadia"
+
+alert(nombre)
