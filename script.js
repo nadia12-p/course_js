@@ -1,8 +1,6 @@
-var nombre = "Nadia";
-nombre = "Jose";
-
-var edad = 30;
-var telefono = "52 9211474645"
+var nombre = prompt("Ingrese su nombre"); //sirve para preguntar algo y que el usuario lo escriba
+var edad = prompt("Ingrese su edad");
+var telefono = prompt("Ingrese su telefono");
 
 var mensajeFinal = "Nombre: " + nombre + ". Edad: " + edad + ". Tel: " + telefono; 
 
