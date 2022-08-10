@@ -14,12 +14,18 @@
             return resultado;
         }
 
-        var inputAncho = prompt("Ingresar el ancho del terreno en mts:");
-        var inputAlto = prompt("Ingresar el alto del terreno en mts:");   
+        function calcularTerreno(){
+            var inputAncho = prompt("Ingresar el ancho del terreno en mts:");
+            var inputAlto = prompt("Ingresar el alto del terreno en mts:");   
 
-        var superficieTerreno = calcularSuperficie(inputAncho, inputAlto);
+            var superficieTerreno = calcularSuperficie(inputAncho, inputAlto);
 
-        alert("La superficie del terreno es: " + superficieTerreno);
+            alert("La superficie del terreno es: " + superficieTerreno);
+        }
+
+        calcularTerreno();
+        calcularTerreno();
+       
 
 
     </script>
