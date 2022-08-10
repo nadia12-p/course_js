@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //var contador = 0;
+        /*
+        while (contador < 3) {
+            alert("Valor: " + contador);
+            contador++;
+        }*/
+
+        /*
+        do {
+            alert("Valor: " + contador);
+            contador++; 
+        } while(contador < 3);*/
+
+        //Calcular sumatoria de 1000
+        /*
+        var sumatoria = 0;
+        var contador = 0;
+        debugger;
+
+        while(contador <= 1000) {
+            sumatoria+=contador;
+            contador++;
+        }
+        alert(sumatoria);*/
+
+        var sumatoria = 0;
+        for (var i=0;i<1000;i++) {
+            if ( i % 2 == 0) {
+                sumatoria += i;
+            }
+        }
+        alert("La sumatoria de numeros pares entre 0 y 1000 es: " + sumatoria);
+
+    </script>
+    
+</body>
+</html>
