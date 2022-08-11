@@ -9,8 +9,14 @@
 <body>
     
     <script>
-        
-        setTimeout(() => alert("Tiempo completo"), 3000);
+
+       // setTimeout(() => alert("Tiempo completo"), 3000);
+
+       var timer = setInterval(() => alert("Tiempo cumplido"), 1000);
+       
+       setTimeout(() => {
+        clearInterval(timer);
+       },10 * 1000)
 
     </script>
 </body>
