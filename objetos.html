@@ -7,25 +7,52 @@
     <title>Document</title>
 </head>
 <body>
+
+    <label>Nombre</label><input id="txtNombre" type = "text" /><br />
+    <label>Apellido</label><input id="txtApellido" type = "text" /><br />
+    <label>Telefono</label><input id="txtTelefono" type = "text" /><br />
+    <label>Email</label><input id="txtEmail" type = "text" /><br />
+    <button id="btnAgregar">Agregar</button><br /><br />
+    
+    <div id="listado">
+
+    </div>
+
     <script>
 
-        var persona = {
-            "nombre": "Nadia",
-            "apellido": "Pintos",
-            "telefono": 9211474645,
-            "email": "nadiapintos98@gmail.com",
-            "direccion": "Napoles 333",
-            "empleo": {
-                "nombre": "Programador",
-                "localidad": "España"
-            }
+        window.onload = iniciar;
+
+        var personas = [];
+
+        function iniciar() {
+            var btnAgregar = document.getElementById("btnAgregar");
+            btnAgregar.addEventListener("click", clickBtnAgregar)
         }
 
-        alert(persona.empleo.nombre)
+        function clickBtnAgregar() {
+            var nombre = document.getElementById("txtNombre").value;
+            var apellido = document.getElementById("txtApellido").value;
+            var email = document.getElementById("txtEmail").value;
+            var telefono = document.getElementById("txtTelefono").value;
 
-        persona.direccion = "Binomios"
+            var persona = {
+                "nombre": nombre,
+                "apellido": apellido,
+                "telefono": telefono,
+                "email": email
+            }
+            personas.push(persona);
+            mostrarPersonas();
+        }
 
-        console.log(persona);
+        function mostrarPersonas() {
+            var listado = document.getElementById("listado");
+            var html = "";
+            for (var persona of personas) {
+                html += `${persona.nombre} ${persona.apellido} ${persona.email} ${persona.telefono} <br />`
+            }
+            listado.innerHTML = html;
+        }
 
     </script>
     
