@@ -5,7 +5,15 @@ function iniciar() {
     var btnAgregar = document.getElementById("btnAgregar");
     btnAgregar.addEventListener("click", clickBtnAgregar);
 
+    var btnBorrar = document.getElementById("btnBorrar");
+    btnBorrar.addEventListener("click", clickBtnBorrar);
+
     //renderiza la nota
+    mostrarNotas();
+}
+
+function clickBtnBorrar() {
+    localStorage.clear();
     mostrarNotas();
 }
 
